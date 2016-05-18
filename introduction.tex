@@ -1,0 +1,18 @@
+\section{Introduction}
+\label{sec:introduction}
+Manual memory mangagement primitives (e.g. \(\texttt{malloc}\) and
+\(\texttt{free}\) in C language) are a very flexible way to manage
+computer memory cells.  We can write a program which dynamically
+allocates a memory cell during running and deallocates a memory cell
+when it is no longer used. However, manual memory management
+primitives often cause hard-to-find problems, for example, double
+frees (\texttt{free} a deallocated memory cell ), memory leaks (forget
+to deallocate memory cells) and illegal accesses to a dangling
+pointer. Therefore, many static verification methods have been
+proposed to guarantee safe memory deallocation. They prove
+\emph{partial} memory-leak freedom: if a program terminates, all the
+memory cells are safe deallocated. As we know that nonterminating
+programs are very common in real-world programmings such as Web
+servers and operating systems. To guarantee \emph{total} memory-leak
+freedom, if a program does not consume unbounded number of memory
+cells during execution, is a very crucial issue.
